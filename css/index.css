@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@import 'common.css';
+
+body{color: var(--text-dark); font: 13px/1.3 'Syne', sans-serif;}
+.text-grey{color: var(--text-grey)}
+.text-white{color: var(--text-white)}
+
+
+header{z-index: 999; position: absolute; top: 0; left: 0; display: flex; justify-content: space-between; width: 100%; padding: 32px 39px;}
+header .logo{width: 100px; height: 40px;}
+header .header-right-box{display: flex; height: 100%; align-items: center;}
+.header-right-box .cart{margin-right: 56px; text-transform: uppercase; font-weight: 500;}
+.header-right-box .toggle-menu{cursor: pointer; width: 20px; height: 22px;}
+.toggle-menu .top-line,
+.toggle-menu .bottom-line{height: 2px; margin: 6px auto; background-color: #262626; transition: all .5s;}
+
+
+/* toggle시 나타나는 전체메뉴 */
+.menu-container{position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; padding: 75px 43px; background-color: #faf4e5;}
+.menu-container .menu-title{font-size: 50px; line-height: 1;}
+.menu-container .menu-list{}
+.menu-list .menu-item{display: flex; align-items: center; font-size: 20px; font-weight: 600;}
+.menu-item .select-circle{width: 10px; height: 10px; border-radius: 50%; background-color: var(--text-dark); opacity: 0; transition: all .5s;}
+.menu-container .menu-img-box{width: 439px; height: 765px; background: url(../img/toggle_menu.jpg)no-repeat center center/cover;}
+
+/* toggle 스타일 */
+header.on ~ .menu-container{visibility: visible;}
+header.on .logo{visibility: hidden;}
+header.on .toggle-menu .top-line{transform: translateY(4px) rotateZ(45deg);}
+header.on .toggle-menu .bottom-line{transform: translateY(-4px) rotateZ(-45deg);}
+
+main section{display: flex; width: 100%; height: 100vh;}
+
+.sec01{background-color: #e0ebeb;}
+.sec01 .sec01-left-col{width: 75%;}
+.sec01-left-col > p{padding: 44px 40px; font-size: 28px;}
+.sec01 .sec01-right-col{width: 20%; margin: 126px auto; font-size: 15px;}
+.sec01-right-col .slide-desc{margin: 20px 0;}
+.sec01-right-col .shop-here{width: fit-content; height: 20px; border-bottom: 1px solid var(--text-dark); text-transform: uppercase; font-size: 12px; font-weight: bold; transition: all .5s;}
+.sec01-right-col .shop-here:hover {opacity: .5;}
+
+.drag-slide-container{height: 825px; overflow: hidden;}
+.drag-slide-container .drag-slide-wrap{display: flex; width: 400%; height: 100%; border: 1px solid red;}
+.drag-slide-wrap .drag-slide-item{width: 25%; height: 100%;}
+.drag-slide-wrap .slide-item01{background: url(../img/slide001.jpg)no-repeat center center/cover;}
+.drag-slide-wrap .slide-item02{background: url(../img/slide002.jpg)no-repeat center center/cover;}
+.drag-slide-wrap .slide-item03{background: url(../img/slide003.jpg)no-repeat center center/cover;}
+.drag-slide-wrap .slide-item04{background: url(../img/slide004.jpg)no-repeat center center/cover;}
+
+
+.sec02{background-color: #6666cc;}
+.sec03{background-color: #011736;}
+.sec04{background-color: #897470;}
+.sec05{background-color: #897470;}
+.sec06{background-color: #6d7463;}
+.sec07{background-color: #ebebeb;}
+.sec08{background-color: #757784;}

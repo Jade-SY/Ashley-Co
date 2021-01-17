@@ -1,0 +1,19 @@
+/* COMMON CSS */
+
+* {margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+div, header, nav, main, footer, section, article, ul, li, h1, h2, h3, h4, h5, h6, p {margin: 0; padding: 0; box-sizing: border-box;} 
+h1, h2, h3, h4, h5, h6{font-size: 100%; font-weight: normal;}
+img{vertical-align: top;}
+
+
+/* ROOT */
+
+:root {
+  --text-white: #ffffff;
+  --text-dark: #2a2b2b;
+  --text-grey: #b2abbb;
+}
+
+::selection{ background: #262626; color:var(--text-white);}
